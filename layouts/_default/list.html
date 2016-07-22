@@ -1,0 +1,31 @@
+
+{{ partial "header" . }}
+{{ partial "logo" . }}
+    {{ partial "navbar" . }}
+    <!-- Main -->
+    <div id="main">
+    <div class="inner">
+        {{ range .Data.Pages.GroupByDate "2006" }}
+        <h2>{{ .Key }}</h2>
+            {{ range .Pages }}
+                
+                <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                
+                <div class="-1u">
+                {{ .Description }}
+                </div>
+
+                <div class="-1u">
+                {{ .Summary }}
+                </div>
+                
+                <div class="align-right">
+                {{ .Date.Format "Mon, Jan 2, 2006" }}
+                </div>
+        {{ end }}
+</ul>
+{{ end }}
+    </div>
+    </div>
+    {{ partial "sidebar" . }}
+{{ partial "footer" . }}

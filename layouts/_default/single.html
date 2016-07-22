@@ -1,0 +1,18 @@
+{{ partial "header" . }}
+{{ partial "logo" . }}
+{{ partial "navbar" . }}
+				<!-- Main -->
+				<div id="main">
+					<div class="inner">
+						<h1>{{ .Title }}</h1>
+						<div class="8u">
+						<p>{{ .Description }}</p>
+						</div>
+						<div class="12u$">
+						{{ .Render "featured"}}
+						</div>
+<!--							<span class="image main"><img src="images/pic13.jpg" alt="" /></span> -->
+						<p>{{ .Content }}</p>
+					</div>
+				</div>
+{{ partial "footer" . }}
