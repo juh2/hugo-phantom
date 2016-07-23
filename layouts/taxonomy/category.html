@@ -1,0 +1,28 @@
+{{ partial "header" . }}
+{{ partial "logo" . }}
+{{ partial "navbar" . }}
+
+<div id="main">
+  <div class="inner">
+   <h1 id="title">{{ .Title }}</h1>
+    {{ range .Data.Pages }}
+      <hr />
+                <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                
+                <p>
+                {{ .Date.Format "Mon, Jan 2, 2006" }}
+                </p>
+
+                <div>
+                {{ .Description }}
+                </div>
+
+                <div>
+                {{ .Summary }}
+
+                <p class="align-right"><a href='{{ .Permalink }}'><nobr>Weiterlesen →</nobr></a></p>   
+  {{ end }}
+  </div>
+</div>
+
+{{ partial "footer.html" . }}
