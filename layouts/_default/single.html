@@ -6,10 +6,12 @@
 					<div class="inner">
 						<h1>{{ .Title }}</h1>
 						<div class="8u">
-						<p>{{ .Description }}</p>
+						<p><strong>{{ .Description }}</strong></p>
 						</div>
 						<div class="12u$">
-						<span class="image main"><img src="{{ .Params.image }}" alt="" /></span>
+						{{ with .Params.images }}
+						<span class="image main"><img src="{{ index . 0 | absURL }}" alt="" /></span>
+						{{ end }}
 						</div>
 						<p>{{ .Content }}</p>
 					</div>

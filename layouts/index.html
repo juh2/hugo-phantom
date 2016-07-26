@@ -13,7 +13,9 @@
                                 {{ range first 12 .Data.Pages }}
                                 <article class="style{{ $.Scratch.Get "classCounter" }}">
                                     <span class="image">
-                                        <img src="{{ .Params.image }}" alt="" />
+                                    {{ with .Params.images}}
+                                        <img src="{{ index . 0 | absURL }}" alt="" />
+                                    {{ end }}
                                     </span>
                                     <a href="{{ .Permalink }}">
                                         <h2>{{ .Title }} </h2>
