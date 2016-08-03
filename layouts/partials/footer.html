@@ -94,7 +94,10 @@
 								</ul>
 							</section>
 							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								{{ with .Site.Params.copyright }}
+								<li>&copy; {{ . }}{{ end }} {{with .Site.Params.year }} {{ . }} {{ end }} – {{ .Now.Year }}</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li><a href="/impressum">Impressum</a></li>
+								
 							</ul>
 						</div>
 					</footer>
