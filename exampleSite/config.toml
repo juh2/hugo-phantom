@@ -1,0 +1,61 @@
+baseurl = "www.yoursite.com"
+languageCode = "en-EN"
+title = "Hugo Phantom Theme"
+theme = "hugo-phantom"
+preserveTaxonomyNames = true
+paginate = 5
+metaDataFormat = "yaml"
+
+
+[params]
+    # Sets the content and meta tag description for the main page
+    # The year will become the starting year of a copyright entry.
+    headline             = "This is Phantom, a free, fully responsive site template designed by HTML5 UP."
+    description          = "Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam."
+    copyright            = "Your name"
+    year                 = 2016
+
+
+# Set up your menu items in the navigation bar
+# You can use identifier to prepend a font awesome icon to your text
+#[[menu.main]]
+#    name = "Blog"
+#    url = "/blog"
+#    identifier = "fa fa-newspaper-o"
+#    weight = 1
+
+[[menu.main]]
+    name = "Start"
+    url = "/"
+    weight = 0
+
+[[menu.main]]
+    name = "Contents"
+    url = "/post"
+    weight = 1
+
+[[menu.main]]
+    name = "Categories"
+    url = "/categories"
+    weight = 2
+
+[[menu.main]]
+    name = "About"
+    url = "/about"
+    weight = 3
+
+[[menu.main]]
+    name = "Imprint"
+    url = "/imprint"
+    weight = 4
+
+# Insert your username and the icon will appear at the bottom of the site.
+# Look at the partial footer.html if you want to add more.
+[social]
+    github          = ""
+    dribbble        = ""
+    instagram       = ""
+    facebook        = ""
+    twitter         = ""
+    email           = ""
+
