@@ -8,7 +8,7 @@
                                 <h1>{{ .Site.Params.headline }}</h1>
                                 <p>{{ .Site.Params.description }}</p>
                             </header>
-                            <section class="tiles">                               
+                            <section class="tiles">
                             {{ $.Scratch.Set "classCounter" 1}}
                                 {{ range first 12 .Data.Pages }}
                                 <article class="style{{ $.Scratch.Get "classCounter" }}">
@@ -33,7 +33,7 @@
                             </section>
                             <div style="padding:4ex;">
                             <p class="align-center">
-                            <a class="button special fit" href="/post/">Weitere Beiträge</a>
+                            <a class="button special fit" href="/post/">{{ .Site.Data.i18n.morelink }}</a>
                             </p>
                             </div>
                         </div>

@@ -3,9 +3,9 @@
 
 name = "Hugo Phantom"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
+licenselink = "https://github.com/juh2/hugo-phantom/blob/master/LICENSE.md"
 description = "Ported theme of HTML5 UP."
-homepage = "http://siteforthistheme.com/"
+homepage = "https://github.com/juh2/hugo-phantom"
 tags = ["blog", "responsive"]
 features = ["", ""]
 min_version = 0.15
