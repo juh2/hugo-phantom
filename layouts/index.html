@@ -1,9 +1,5 @@
-{{ partial "header" . }}
-{{ partial "logo" . }}
-{{ partial "navbar" . }}
+{{ define "main" }}
     <!-- Main -->
-    <div id="main">
-        <div class="inner">
                             <header>
                                 <h1>{{ .Site.Params.headline }}</h1>
                                 <p>{{ .Site.Params.description }}</p>
@@ -36,6 +32,4 @@
                             <a class="button special fit" href="/post/">{{ .Site.Data.i18n.morelink }}</a>
                             </p>
                             </div>
-                        </div>
-    </div>
-{{ partial "footer" . }}
+ {{ end }}

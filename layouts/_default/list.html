@@ -1,10 +1,6 @@
-
-{{ partial "header" . }}
-{{ partial "logo" . }}
-    {{ partial "navbar" . }}
+{{ define "main" }}
     <!-- Main -->
-    <div id="main">
-    <div class="inner">
+    
         {{ range .Data.Pages.GroupByDate "2006" }}
         <h1>{{ .Key }}</h1>
             {{ range .Pages }}
@@ -25,10 +21,6 @@
                 <p class="align-right"><a href='{{ .Permalink }}'><nobr>Weiterlesen →</nobr></a></p>
 
                 </div>
-                
-
+            {{ end }}
         {{ end }}
 {{ end }}
-    </div>
-    </div>
-{{ partial "footer" . }}
