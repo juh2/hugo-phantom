@@ -3,7 +3,9 @@
 @import 'libs/mixins';
 @import 'libs/skel';
 @import 'font-awesome.min.css';
-@import 'googlefonts.css';
+
+/* comment the following line and uncomment the next but one to use fonts with the google api */
+@import 'fonts.css';
 /* @import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900'); */
 
 /*
