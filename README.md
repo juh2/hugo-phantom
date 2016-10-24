@@ -1,4 +1,4 @@
-# Hugo Phantom Themes
+# Hugo Phantom Theme
 
 This is a Hugo theme based on the [Phantom Theme by HTML5 UP](https://html5up.net/phantom).
 
