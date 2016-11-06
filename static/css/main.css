@@ -1277,7 +1277,7 @@ body, input, select, textarea {
   color: #585858;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-size: 16pt;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.75; }
   @media screen and (max-width: 1680px) {
     body, input, select, textarea {
@@ -1688,7 +1688,7 @@ input[type="radio"] {
     cursor: pointer;
     display: inline-block;
     font-size: 1em;
-    font-weight: 300;
+    font-weight: 400;
     padding-left: 2.55em;
     padding-right: 0.75em;
     position: relative; }
