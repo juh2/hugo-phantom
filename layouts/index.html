@@ -6,7 +6,7 @@
                             </header>
                             <section class="tiles">
                             {{ $.Scratch.Set "classCounter" 1}}
-                                {{ range first 12 .Data.Pages }}
+                                {{ range first 12 (where .Data.Pages "Section" "post")}}
                                 <article class="style{{ $.Scratch.Get "classCounter" }}">
                                     <span class="image">
                                     {{ with .Params.images}}
