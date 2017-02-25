@@ -13,6 +13,15 @@
 		<link rel="stylesheet" href="/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+
+		<link rel="schema.DC"      href="http://purl.org/dc/elements/1.1/" />
+        <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
+        <meta name="DC.title" content="{{ .Title }}" />
+        <meta name="DC.description" content="{{ .Description }}" />
+        <meta name="DC.creator" content="Jan Ulrich Hasecke" />
+        <meta name="DC.language" content="de" />
+        <meta name="DC.publisher" content="Jan Ulrich Hasecke"/>
+        <meta name="DC.subject" content="{{ range .Params.tags }}{{ . }},{{ end }}" />
 		{{ template "_internal/twitter_cards.html" . }}
         {{ template "_internal/opengraph.html" . }}
         {{ template "_internal/schema.html" . }}
