@@ -10,7 +10,7 @@
                                 <article class="style{{ $.Scratch.Get "classCounter" }}">
                                     <span class="image">
                                     {{ with .Params.images}}
-                                        <img src="{{ index . 0 | absURL }}" alt="" />
+                                        <img src="{{ index . 0 | relURL }}" alt="" />
                                     {{ end }}
                                     </span>
                                     <a href="{{ .Permalink }}">
