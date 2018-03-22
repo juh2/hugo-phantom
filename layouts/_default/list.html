@@ -1,26 +1,26 @@
 {{ define "main" }}
-    <!-- Main -->
-    
-        {{ range .Data.Pages.GroupByDate "2006" }}
-        <h1>{{ .Key }}</h1>
-            {{ range .Pages }}
-                <hr />
-                <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-                
-                <p>
-                {{ .Date.Format "Mon, Jan 2, 2006" }}
-                </p>
+<!-- Main -->
 
-                <div>
-                {{ .Description }}
-                </div>
+{{ range .Data.Pages.GroupByDate "2006" }}
+<h1>{{ .Key }}</h1>
+{{ range .Pages }}
+<hr />
+<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
 
-                <div>
-                {{ .Summary }}
+<p>
+{{ .Date.Format "Mon, Jan 2, 2006" }}
+</p>
 
-                <p class="align-right"><a href='{{ .Permalink }}'><nobr>{{ .Site.Data.i18n.morelink }} →</nobr></a></p>
+<div>
+  {{ .Description }}
+</div>
 
-                </div>
-            {{ end }}
-        {{ end }}
+<div>
+  {{ .Summary }}
+
+  <p class="align-right"><a href='{{ .Permalink }}'><nobr>{{ .Site.Data.i18n.morelink }} →</nobr></a></p>
+
+</div>
+{{ end }}
+{{ end }}
 {{ end }}
