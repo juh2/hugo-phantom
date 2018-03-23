@@ -9,10 +9,17 @@
   {{ range first 12 (where .Data.Pages "Section" "post")}}
   <article class="style{{ $.Scratch.Get "classCounter" }}">
     <span class="image">
-      {{ with .Params.images}}
-      <img src="{{ index . 0 | relURL }}" alt="" />
+      {{ if .Resources.GetMatch "image" }}
+      {{ $preview := .Resources.GetMatch "intro" }}
+      {{ with $preview }}
+      {{ $scaled := .Resize "322x" }}
+      <img src="{{ $scaled.Permalink }}" alt="" />
       {{ end }}
-    </span>
+      {{ else }}
+      {{ $preview := .Resources.GetMatch "intro" }}
+      <img src="{{ $preview.Permalink }}" alt="" />
+      {{ end }}
+      </span>
     <a href="{{ .Permalink }}">
       <h2>{{ .Title }} </h2>
       <div class="content">
