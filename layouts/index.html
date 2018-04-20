@@ -13,12 +13,12 @@
         {{ $preview := .Resources.GetMatch "intro" }}
         {{ with $preview }}
         {{ $scaled := .Resize "322x" }}
-        <img src="{{ $scaled.Permalink }}" alt="" />
+        <img src="{{ $scaled.RelPermalink }}" alt="" />
         {{ end }}
       {{ end }}
       {{ if .Resources.GetMatch "introsvg" }}
         {{ $preview := .Resources.GetMatch "introsvg" }}
-        <img src="{{ $preview.Permalink }}" alt="" />
+        <img src="{{ $preview.RelPermalink }}" alt="" />
         {{ end }}
       </span>
     <a href="{{ .Permalink }}">
