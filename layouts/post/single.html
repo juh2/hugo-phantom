@@ -15,7 +15,7 @@
   {{ if .Resources.Match "intro" }}
     {{ $preview := .Resources.GetMatch "intro" }}
     {{ with $preview }}
-    {{ $scaled := .Resize "1045x" }}
+    {{ $scaled := .Resize "1045x Gaussian" }}
     <img class="image main" src="{{ $scaled.RelPermalink }}" alt="" />
     {{ end }}
   {{ end }}

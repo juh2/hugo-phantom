@@ -12,7 +12,7 @@
       {{ if .Resources.GetMatch "intro" }}
         {{ $preview := .Resources.GetMatch "intro" }}
         {{ with $preview }}
-        {{ $scaled := .Resize "322x" }}
+        {{ $scaled := .Fill "322x322 smart" }}
         <img src="{{ $scaled.RelPermalink }}" alt="" />
         {{ end }}
       {{ end }}
